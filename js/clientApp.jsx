@@ -1,34 +1,18 @@
 const React = require('react')
 const ReactDOM = require('react-dom');
-const div = React.DOM.div;
 
-const MyTitle = require('./MyTitle');
-
-const myTtitleFact = React.createFactory(MyTitle);
-const ce = React.createElement;
-// const MyComp = function() {
-
-//     return (
-//         <div>
-//             <MyTitle title='1234'></MyTitle>
-//             <MyTitle title='hi frenass'></MyTitle>
-//             <MyTitle title='satish kumar'></MyTitle>
-//         </div>
-//     )
-    const MyComp = () =>  (
-            <div>
-                <MyTitle title='1234'></MyTitle>
-                <MyTitle title='hi frenass'></MyTitle>
-                <MyTitle title='satish kumar'></MyTitle>
-            </div>
-        )
-//    return div(null,
-//        React.createElement(MyTitle,null),
-//        ce(MyTitle,{title:'12344'}),
-//        myTtitleFact(null)
-//     )
-
+const App = () =>(
+    <div className="app-container">
+      <div className="home-info">
+        <h1 className="title">
+          svideo
+        </h1>
+        <input className="search" type="text" placeholder="Search" />
+        <button className="browse-all"> Or browse all</button>
+      </div>
+    </div>
+)
 ReactDOM.render(
-    <MyComp />,
+    <App />,
     document.getElementById('app')
 )

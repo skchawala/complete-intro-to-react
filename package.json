@@ -1,8 +1,8 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
-    "build1": "webpack --module-bind 'js=babel-loader' js/clientApp.js public/bundle.js",
-    "build":"webpack"
+    "build1": "webpack  --module-bind 'js=babel-loader' js/clientApp.js public/bundle.js",
+    "build":"webpack --watch"
   },
   "dependencies": {
     "axios": "0.16.1",
