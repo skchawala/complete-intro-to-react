@@ -1,15 +1,13 @@
 
-var React = require('react')
-var div = React.DOM.div;
-var h1 = React.DOM.h1;
+const React = require('react')
 
 const MyTitle = React.createClass(
     {
        render(){
            return(
-                div(null,
-                    h1(null,'this is my first component'+this.props.title)
-                )  
+                <div>
+                    <h1>hey boss {this.props.title}</h1>
+                </div>
            ) 
        }
     }
