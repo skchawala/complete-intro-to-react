@@ -24,8 +24,12 @@ const reduceSearchTerm = (state,action) =>{
        return newState
 }
 
+//to use  redux dev tool
 
-const store = redux.createStore(rootReducer);
+
+const store = redux.createStore(rootReducer,initialState,redux.compose(
+    typeof window==='object' && typeof window.devToolsExtension!=='undefined'? window.devToolsExtension():(f)=>f
+));
 
 
 const mapStateToProps = (state) => {
