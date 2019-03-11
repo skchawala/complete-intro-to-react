@@ -1,16 +1,21 @@
 const React = require('react')
 const ReactDOM = require('react-dom');
+const Landing = require('./Landing')
+
+const { HashRouter,Route }= require('react-router-dom');
+
+const Search = require('./Search')
+const Layout = require('./Layout')
 
 const App = () =>(
-    <div className="app-container">
-      <div className="home-info">
-        <h1 className="title">
-          svideo
-        </h1>
-        <input className="search" type="text" placeholder="Search" />
-        <button className="browse-all"> Or browse all</button>
-      </div>
+    <HashRouter>
+    <div className="myroot">
+       <Layout >
+            <Route   path="/" exact   component={Landing}></Route>
+            <Route path="/search" component={Search}></Route>
+       </Layout>
     </div>
+    </HashRouter>
 )
 ReactDOM.render(
     <App />,
